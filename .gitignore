@@ -1,0 +1,9 @@
+target/
+*.class
+*.jar
+*.bwextension
+.idea/
+*.iml
+.settings/
+.project
+.classpath
