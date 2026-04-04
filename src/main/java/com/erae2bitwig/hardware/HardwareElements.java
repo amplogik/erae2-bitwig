@@ -2,11 +2,12 @@ package com.erae2bitwig.hardware;
 
 import com.bitwig.extension.controller.api.ControllerHost;
 import com.bitwig.extension.controller.api.HardwareSurface;
-import com.bitwig.extension.controller.api.MidiIn;
 
-import com.erae2bitwig.core.Erae2MidiPorts;
 import com.erae2bitwig.sysex.ScriptProtocol;
 import com.erae2bitwig.sysex.SysExConstants;
+
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Factory that creates all hardware control elements for the Erae Touch 2.
@@ -43,28 +44,28 @@ public class HardwareElements
    private final EraeSlider[] send1Sliders;
    private final EraeSlider[] send2Sliders;
 
+   // Lookup: (type << 8 | id) -> button
+   private final Map<Integer, EraeButton> buttonMap = new HashMap<>();
+
    private static final int MAX_TRACKS = 12;
    private static final int MAX_SCENES = 10;
 
    public HardwareElements(final ControllerHost host,
-                           final Erae2MidiPorts midiPorts,
                            final ScriptProtocol protocol)
    {
       surface = host.createHardwareSurface();
       surface.setPhysicalSize(300, 200);
 
-      final MidiIn mainIn = midiPorts.getMainIn();
-
       // Navigation buttons
-      upButton = createActionButton(host, mainIn, protocol, SysExConstants.BUTTON_UP, "Up");
-      downButton = createActionButton(host, mainIn, protocol, SysExConstants.BUTTON_DOWN, "Down");
-      leftButton = createActionButton(host, mainIn, protocol, SysExConstants.BUTTON_LEFT, "Left");
-      rightButton = createActionButton(host, mainIn, protocol, SysExConstants.BUTTON_RIGHT, "Right");
+      upButton = createActionButton(host, protocol, SysExConstants.BUTTON_UP, "Up");
+      downButton = createActionButton(host, protocol, SysExConstants.BUTTON_DOWN, "Down");
+      leftButton = createActionButton(host, protocol, SysExConstants.BUTTON_LEFT, "Left");
+      rightButton = createActionButton(host, protocol, SysExConstants.BUTTON_RIGHT, "Right");
 
       // Transport
-      playButton = createActionButton(host, mainIn, protocol, SysExConstants.BUTTON_PLAY, "Play");
-      stopButton = createActionButton(host, mainIn, protocol, SysExConstants.BUTTON_STOP, "Stop");
-      stopAllButton = createActionButton(host, mainIn, protocol, SysExConstants.BUTTON_STOP_ALL, "StopAll");
+      playButton = createActionButton(host, protocol, SysExConstants.BUTTON_PLAY, "Play");
+      stopButton = createActionButton(host, protocol, SysExConstants.BUTTON_STOP, "Stop");
+      stopAllButton = createActionButton(host, protocol, SysExConstants.BUTTON_STOP_ALL, "StopAll");
 
       // Session matrix: 12 columns x 10 rows
       matrixButtons = new EraeButton[MAX_TRACKS][MAX_SCENES];
@@ -73,7 +74,7 @@ public class HardwareElements
          for (int col = 0; col < MAX_TRACKS; col++)
          {
             final int id = col + (row * SysExConstants.MATRIX_COLUMN_STRIDE);
-            matrixButtons[col][row] = new EraeButton(host, surface, mainIn, protocol,
+            matrixButtons[col][row] = createButton(host, protocol,
                SysExConstants.MATRIX_BUTTON_PREFIX, id,
                "Matrix_" + col + "_" + row);
          }
@@ -83,7 +84,7 @@ public class HardwareElements
       sceneLaunchButtons = new EraeButton[MAX_SCENES];
       for (int i = 0; i < MAX_SCENES; i++)
       {
-         sceneLaunchButtons[i] = createActionButton(host, mainIn, protocol, i,
+         sceneLaunchButtons[i] = createActionButton(host, protocol, i,
             "SceneLaunch_" + i);
       }
 
@@ -91,7 +92,7 @@ public class HardwareElements
       muteButtons = new EraeButton[MAX_TRACKS];
       for (int i = 0; i < MAX_TRACKS; i++)
       {
-         muteButtons[i] = createActionButton(host, mainIn, protocol,
+         muteButtons[i] = createActionButton(host, protocol,
             SysExConstants.MUTE_OFFSET + i, "Mute_" + i);
       }
 
@@ -99,7 +100,7 @@ public class HardwareElements
       soloButtons = new EraeButton[MAX_TRACKS];
       for (int i = 0; i < MAX_TRACKS; i++)
       {
-         soloButtons[i] = createActionButton(host, mainIn, protocol,
+         soloButtons[i] = createActionButton(host, protocol,
             SysExConstants.SOLO_OFFSET + i, "Solo_" + i);
       }
 
@@ -107,7 +108,7 @@ public class HardwareElements
       armButtons = new EraeButton[MAX_TRACKS];
       for (int i = 0; i < MAX_TRACKS; i++)
       {
-         armButtons[i] = createActionButton(host, mainIn, protocol,
+         armButtons[i] = createActionButton(host, protocol,
             SysExConstants.ARM_OFFSET + i, "Arm_" + i);
       }
 
@@ -115,33 +116,49 @@ public class HardwareElements
       volumeSliders = new EraeSlider[MAX_TRACKS];
       for (int i = 0; i < MAX_TRACKS; i++)
       {
-         volumeSliders[i] = new EraeSlider(host, surface, mainIn, protocol, i,
-            "Volume_" + i);
+         volumeSliders[i] = new EraeSlider(protocol, i);
       }
 
       // Send1 sliders: IDs 12-23
       send1Sliders = new EraeSlider[MAX_TRACKS];
       for (int i = 0; i < MAX_TRACKS; i++)
       {
-         send1Sliders[i] = new EraeSlider(host, surface, mainIn, protocol, i + 12,
-            "Send1_" + i);
+         send1Sliders[i] = new EraeSlider(protocol, i + 12);
       }
 
       // Send2 sliders: IDs 24-35
       send2Sliders = new EraeSlider[MAX_TRACKS];
       for (int i = 0; i < MAX_TRACKS; i++)
       {
-         send2Sliders[i] = new EraeSlider(host, surface, mainIn, protocol, i + 24,
-            "Send2_" + i);
+         send2Sliders[i] = new EraeSlider(protocol, i + 24);
       }
    }
 
-   private EraeButton createActionButton(final ControllerHost host, final MidiIn midiIn,
+   private EraeButton createButton(final ControllerHost host, final ScriptProtocol protocol,
+                                   final int type, final int id, final String name)
+   {
+      final EraeButton btn = new EraeButton(host, surface, protocol, type, id, name);
+      buttonMap.put(buttonKey(type, id), btn);
+      return btn;
+   }
+
+   private EraeButton createActionButton(final ControllerHost host,
                                          final ScriptProtocol protocol,
                                          final int buttonId, final String name)
    {
-      return new EraeButton(host, surface, midiIn, protocol,
+      return createButton(host, protocol,
          SysExConstants.ACTION_BUTTON_PREFIX, buttonId, name);
+   }
+
+   /** Look up a button by its SysEx type and ID. Returns null if not found. */
+   public EraeButton findButton(final int type, final int id)
+   {
+      return buttonMap.get(buttonKey(type, id));
+   }
+
+   private static int buttonKey(final int type, final int id)
+   {
+      return (type << 16) | id;
    }
 
    /** Call from extension flush() to push pending hardware updates. */

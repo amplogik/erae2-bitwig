@@ -75,14 +75,14 @@ public class Erae2ExtensionDefinition extends ControllerExtensionDefinition
       {
          case LINUX:
             list.add(
-               new String[]{"Erae II MIDI 1", "Erae II MIDI 2"},
-               new String[]{"Erae II MIDI 1", "Erae II MIDI 2"});
+               new String[]{"Erae 2 MIDI", "Erae 2 MIDI (MPE)"},
+               new String[]{"Erae 2 MIDI", "Erae 2 MIDI (MPE)"});
             break;
          case WINDOWS:
          case MAC:
             list.add(
-               new String[]{"Erae II", "Erae II"},
-               new String[]{"Erae II", "Erae II"});
+               new String[]{"Erae 2 MIDI", "Erae 2 MIDI (MPE)"},
+               new String[]{"Erae 2 MIDI", "Erae 2 MIDI (MPE)"});
             break;
       }
    }
