@@ -21,6 +21,7 @@ public class TouchZone
    private int colorR;
    private int colorG;
    private int colorB;
+   private boolean outlined = false;
 
    // Touch callbacks
    private Consumer<TouchEvent> onPress;
@@ -94,4 +95,6 @@ public class TouchZone
    public int getColorR() { return colorR; }
    public int getColorG() { return colorG; }
    public int getColorB() { return colorB; }
+   public boolean isOutlined() { return outlined; }
+   public void setOutlined(final boolean outlined) { this.outlined = outlined; }
 }
