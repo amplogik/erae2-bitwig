@@ -1,0 +1,367 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<EraeLabProject name="bitwig" selectedLayouts="65535" uniqueID="65535">
+  <VersionEraeData prefix="86" major="6" minor="0" patch="0" commit="1087fd0d"/>
+  <ProjectLayouts>
+    <EreaLabLayout name="LayoutTouch_1">
+      <VersionEraeLab prefix="86" major="1" minor="6" patch="3" commit="5900cb21"/>
+      <Revisions>
+        <LayoutTag revision="1" tagName="" date="2026-04-08T12:28:24.114-07:00">
+          <Layout uniqueID="24613">
+            <GridElement>
+              <Style>
+                <IntensityChange value="-1" time="255"/>
+                <StyleAttributes>
+                  <Empty/>
+                </StyleAttributes>
+              </Style>
+              <Animations>
+                <AnimationClick>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationClick>
+                <AnimationSlide>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationSlide>
+                <AnimationRelease>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationRelease>
+              </Animations>
+              <Geometry xPos="0" yPos="0" width="42" height="24" priority="0" orientation="3"/>
+              <GridElementAttribute>
+                <APIZoneAttributes zoneIndex="0" maxNumFingers="10" fingerDataRate="0"/>
+              </GridElementAttribute>
+            </GridElement>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <VersionEraeData prefix="86" major="6" minor="0" patch="0" commit="1087fd0d"/>
+          </Layout>
+        </LayoutTag>
+      </Revisions>
+    </EreaLabLayout>
+    <EreaLabLayout name="LayoutTouch_2">
+      <VersionEraeLab prefix="86" major="1" minor="6" patch="3" commit="5900cb21"/>
+      <Revisions>
+        <LayoutTag revision="1" tagName="" date="2026-04-08T12:28:24.007-07:00">
+          <Layout uniqueID="29535">
+            <GridElement>
+              <Style>
+                <IntensityChange value="-1" time="255"/>
+                <StyleAttributes>
+                  <Empty/>
+                </StyleAttributes>
+              </Style>
+              <Animations>
+                <AnimationClick>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationClick>
+                <AnimationSlide>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationSlide>
+                <AnimationRelease>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationRelease>
+              </Animations>
+              <Geometry xPos="0" yPos="0" width="42" height="24" priority="0" orientation="3"/>
+              <GridElementAttribute>
+                <APIZoneAttributes zoneIndex="1" maxNumFingers="10" fingerDataRate="0"/>
+              </GridElementAttribute>
+            </GridElement>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <VersionEraeData prefix="86" major="6" minor="0" patch="0" commit="1087fd0d"/>
+          </Layout>
+        </LayoutTag>
+      </Revisions>
+    </EreaLabLayout>
+    <EreaLabLayout name="LayoutTouch_3">
+      <VersionEraeLab prefix="86" major="1" minor="6" patch="3" commit="5900cb21"/>
+      <Revisions>
+        <LayoutTag revision="1" tagName="" date="2026-04-08T12:28:23.897-07:00">
+          <Layout uniqueID="19055">
+            <GridElement>
+              <Style>
+                <IntensityChange value="-1" time="255"/>
+                <StyleAttributes>
+                  <Empty/>
+                </StyleAttributes>
+              </Style>
+              <Animations>
+                <AnimationClick>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationClick>
+                <AnimationSlide>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationSlide>
+                <AnimationRelease>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationRelease>
+              </Animations>
+              <Geometry xPos="0" yPos="0" width="42" height="24" priority="0" orientation="3"/>
+              <GridElementAttribute>
+                <APIZoneAttributes zoneIndex="2" maxNumFingers="10" fingerDataRate="0"/>
+              </GridElementAttribute>
+            </GridElement>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <VersionEraeData prefix="86" major="6" minor="0" patch="0" commit="1087fd0d"/>
+          </Layout>
+        </LayoutTag>
+      </Revisions>
+    </EreaLabLayout>
+    <EreaLabLayout name="LayoutTouch_4">
+      <VersionEraeLab prefix="86" major="1" minor="6" patch="3" commit="5900cb21"/>
+      <Revisions>
+        <LayoutTag revision="1" tagName="" date="2026-04-08T12:28:23.790-07:00">
+          <Layout uniqueID="59651">
+            <GridElement>
+              <Style>
+                <IntensityChange value="-1" time="255"/>
+                <StyleAttributes>
+                  <Empty/>
+                </StyleAttributes>
+              </Style>
+              <Animations>
+                <AnimationClick>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationClick>
+                <AnimationSlide>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationSlide>
+                <AnimationRelease>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationRelease>
+              </Animations>
+              <Geometry xPos="0" yPos="0" width="42" height="24" priority="0" orientation="3"/>
+              <GridElementAttribute>
+                <APIZoneAttributes zoneIndex="3" maxNumFingers="10" fingerDataRate="0"/>
+              </GridElementAttribute>
+            </GridElement>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <VersionEraeData prefix="86" major="6" minor="0" patch="0" commit="1087fd0d"/>
+          </Layout>
+        </LayoutTag>
+      </Revisions>
+    </EreaLabLayout>
+    <EreaLabLayout name="LayoutTouch_5">
+      <VersionEraeLab prefix="86" major="1" minor="6" patch="3" commit="5900cb21"/>
+      <Revisions>
+        <LayoutTag revision="1" tagName="" date="2026-04-08T12:28:23.683-07:00">
+          <Layout uniqueID="8490">
+            <GridElement>
+              <Style>
+                <IntensityChange value="-1" time="255"/>
+                <StyleAttributes>
+                  <Empty/>
+                </StyleAttributes>
+              </Style>
+              <Animations>
+                <AnimationClick>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationClick>
+                <AnimationSlide>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationSlide>
+                <AnimationRelease>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationRelease>
+              </Animations>
+              <Geometry xPos="0" yPos="0" width="42" height="24" priority="0" orientation="3"/>
+              <GridElementAttribute>
+                <APIZoneAttributes zoneIndex="4" maxNumFingers="10" fingerDataRate="0"/>
+              </GridElementAttribute>
+            </GridElement>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <VersionEraeData prefix="86" major="6" minor="0" patch="0" commit="1087fd0d"/>
+          </Layout>
+        </LayoutTag>
+      </Revisions>
+    </EreaLabLayout>
+    <EreaLabLayout name="LayoutTouch_6">
+      <VersionEraeLab prefix="86" major="1" minor="6" patch="3" commit="5900cb21"/>
+      <Revisions>
+        <LayoutTag revision="1" tagName="" date="2026-04-08T12:28:23.573-07:00">
+          <Layout uniqueID="26542">
+            <GridElement>
+              <Style>
+                <IntensityChange value="-1" time="255"/>
+                <StyleAttributes>
+                  <Empty/>
+                </StyleAttributes>
+              </Style>
+              <Animations>
+                <AnimationClick>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationClick>
+                <AnimationSlide>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationSlide>
+                <AnimationRelease>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationRelease>
+              </Animations>
+              <Geometry xPos="0" yPos="0" width="42" height="24" priority="0" orientation="3"/>
+              <GridElementAttribute>
+                <APIZoneAttributes zoneIndex="5" maxNumFingers="10" fingerDataRate="0"/>
+              </GridElementAttribute>
+            </GridElement>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <VersionEraeData prefix="86" major="6" minor="0" patch="0" commit="1087fd0d"/>
+          </Layout>
+        </LayoutTag>
+      </Revisions>
+    </EreaLabLayout>
+    <EreaLabLayout name="LayoutTouch_7">
+      <VersionEraeLab prefix="86" major="1" minor="6" patch="3" commit="5900cb21"/>
+      <Revisions>
+        <LayoutTag revision="1" tagName="" date="2026-04-08T12:28:23.466-07:00">
+          <Layout uniqueID="61257">
+            <GridElement>
+              <Style>
+                <IntensityChange value="-1" time="255"/>
+                <StyleAttributes>
+                  <Empty/>
+                </StyleAttributes>
+              </Style>
+              <Animations>
+                <AnimationClick>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationClick>
+                <AnimationSlide>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationSlide>
+                <AnimationRelease>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationRelease>
+              </Animations>
+              <Geometry xPos="0" yPos="0" width="42" height="24" priority="0" orientation="3"/>
+              <GridElementAttribute>
+                <APIZoneAttributes zoneIndex="6" maxNumFingers="10" fingerDataRate="0"/>
+              </GridElementAttribute>
+            </GridElement>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <VersionEraeData prefix="86" major="6" minor="0" patch="0" commit="1087fd0d"/>
+          </Layout>
+        </LayoutTag>
+      </Revisions>
+    </EreaLabLayout>
+    <EreaLabLayout name="LayoutTouch_8">
+      <VersionEraeLab prefix="86" major="1" minor="6" patch="3" commit="5900cb21"/>
+      <Revisions>
+        <LayoutTag revision="1" tagName="" date="2026-04-08T12:28:23.358-07:00">
+          <Layout uniqueID="6750">
+            <GridElement>
+              <Style>
+                <IntensityChange value="-1" time="255"/>
+                <StyleAttributes>
+                  <Empty/>
+                </StyleAttributes>
+              </Style>
+              <Animations>
+                <AnimationClick>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationClick>
+                <AnimationSlide>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationSlide>
+                <AnimationRelease>
+                  <AnimationEvent shape="7" coloring="1" color="16777215" speed="3"/>
+                </AnimationRelease>
+              </Animations>
+              <Geometry xPos="0" yPos="0" width="42" height="24" priority="0" orientation="3"/>
+              <GridElementAttribute>
+                <APIZoneAttributes zoneIndex="7" maxNumFingers="10" fingerDataRate="0"/>
+              </GridElementAttribute>
+            </GridElement>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <Footswitch midiChannel="0" midiGroup="0" latched="0">
+              <MidiOutputDest usbDevice="1" usbHost="0" midiA="0" midiB="0"/>
+              <FootswitchAttributesUnion>
+                <FootswitchDisabledPedalAttributes/>
+              </FootswitchAttributesUnion>
+            </Footswitch>
+            <VersionEraeData prefix="86" major="6" minor="0" patch="0" commit="1087fd0d"/>
+          </Layout>
+        </LayoutTag>
+      </Revisions>
+    </EreaLabLayout>
+  </ProjectLayouts>
+</EraeLabProject>

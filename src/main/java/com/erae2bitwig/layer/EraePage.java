@@ -41,7 +41,8 @@ public abstract class EraePage
    public void onActivate()
    {
       isActive = true;
-      host.println("Erae Touch 2: Page activated - " + pageId.name());
+      host.println("Erae Touch 2: Page activated - " + pageId.name() +
+         " (zone=" + pageId.getZoneId() + ", touchZones=" + zones.size() + ")");
       drawSurface();
    }
 
@@ -51,21 +52,22 @@ public abstract class EraePage
       isActive = false;
    }
 
-   /** Draw all zones to the Erae surface. */
+   /** Draw all zones to this page's Erae API zone. */
    public void drawSurface()
    {
-      api.clearZone(0);
+      final int zoneId = pageId.getZoneId();
+      api.clearZone(zoneId);
       for (final TouchZone zone : zones)
       {
-         api.drawZone(zone);
+         api.drawZone(zoneId, zone);
       }
    }
 
-   /** Redraw a single zone (e.g., after color change). */
+   /** Redraw a single touch zone (e.g., after color change). */
    protected void redrawZone(final TouchZone zone)
    {
       if (!isActive) return;
-      api.drawZone(zone);
+      api.drawZone(pageId.getZoneId(), zone);
    }
 
    /** Handle a touch event by routing to the appropriate zone. */

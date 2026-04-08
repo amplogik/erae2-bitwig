@@ -87,8 +87,8 @@ public class LowLevelApi
       ports.sendMainMidi(0xC0, layoutIndex, 0);
    }
 
-   /** Draw a TouchZone — filled or outlined based on zone state. */
-   public void drawZone(final com.erae2bitwig.core.TouchZone zone)
+   /** Draw a TouchZone into the given Erae API zone — filled or outlined. */
+   public void drawZone(final int apiZoneId, final com.erae2bitwig.core.TouchZone zone)
    {
       final int x = zone.getPixelX();
       final int y = zone.getPixelY();
@@ -101,15 +101,15 @@ public class LowLevelApi
       if (zone.isOutlined())
       {
          // "Record ready" indicator: bright red outline
-         drawRectangle(0, x, y, w, h, 0, 0, 0);
-         drawRectangle(0, x, y + h - 1, w, 1, 127, 0, 0);  // top
-         drawRectangle(0, x, y, w, 1, 127, 0, 0);            // bottom
-         drawRectangle(0, x, y, 1, h, 127, 0, 0);            // left
-         drawRectangle(0, x + w - 1, y, 1, h, 127, 0, 0);   // right
+         drawRectangle(apiZoneId, x, y, w, h, 0, 0, 0);
+         drawRectangle(apiZoneId, x, y + h - 1, w, 1, 127, 0, 0);  // top
+         drawRectangle(apiZoneId, x, y, w, 1, 127, 0, 0);            // bottom
+         drawRectangle(apiZoneId, x, y, 1, h, 127, 0, 0);            // left
+         drawRectangle(apiZoneId, x + w - 1, y, 1, h, 127, 0, 0);   // right
       }
       else
       {
-         drawRectangle(0, x, y, w, h, r, g, b);
+         drawRectangle(apiZoneId, x, y, w, h, r, g, b);
       }
    }
 
