@@ -2,11 +2,16 @@
 
 A Bitwig Studio controller extension for the [Embodme Erae Touch 2](https://www.embodme.com/), providing five purpose-built control pages: a DAW mixer, a clip launcher, an instrument editor with piano keyboard, a drum-pad performance surface, and a LinnStrument-style MPE playing grid. Three additional layouts on the device are reserved for the user to configure freely in Erae Lab.
 
+> ⚠️ **Linux only.** This extension is developed and tested exclusively on Linux with **PulseAudio + ALSA MIDI**. It is **not** supported on macOS or Windows — the audio/MIDI stack assumptions and the device-discovery paths are Linux-specific. If you try to use this on another platform, you will have a bad time.
+>
+> **Recommended environment:** Ubuntu Linux 24.04 or later (x86_64), Bitwig Studio 6, PulseAudio, ALSA MIDI.
+
 ## Requirements
 
+- **Linux** with PulseAudio and ALSA MIDI (Ubuntu 24.04+ recommended, x86_64)
+- **Bitwig Studio 6** (extension API version 18+)
 - Java 21+
 - Maven 3.8+
-- Bitwig Studio (extension API version 18+)
 - Embodme Erae Touch 2 with Erae Lab installed
 
 ## Build & install
